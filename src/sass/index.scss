@@ -1,0 +1,157 @@
+// @import './reset';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand SC', cursive;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+body {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 184, 0, 1) 10%,
+    rgba(116, 9, 121, 0.8379726890756303) 66%,
+    rgba(84, 68, 154, 1) 100%,
+    rgba(25, 188, 255, 1) 100%
+  );
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 850px;
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    padding: 10px 0;
+  }
+  h3 {
+    margin: 10px 0;
+    font-size: 40px;
+    text-align: center;
+  }
+  .select {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    padding: 15px 0;
+  }
+  .select img {
+    width: 200px;
+    margin: 20px;
+    box-shadow: 0 0 1px 3px #000000;
+    cursor: pointer;
+  }
+  .select img:hover {
+    box-shadow: 0 0 2px 5px #000000;
+  }
+
+  button {
+    display: block;
+    padding: 5px 20px;
+    border: 5px solid black;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-weight: bold;
+    margin: 10px auto;
+    font-size: 40px;
+    color: #000000;
+    text-shadow: 1px 1px 2px #000000;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(20, 20, 20);
+    color: white;
+  }
+  .panels {
+    display: flex;
+    padding: 0 10px;
+  }
+  .panel-left,
+  .panel-right {
+    margin: 20px auto;
+    text-align: center;
+  }
+  .panel-left p {
+    font-size: 30px;
+  }
+  .panel-right p {
+    font-size: 25px;
+    span {
+      font-weight: bold;
+    }
+  }
+  h2 {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    h1 {
+      font-size: 50px;
+    }
+    .select img {
+      width: 170px;
+    }
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .container {
+    h1 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 32px;
+    }
+    .select img {
+      width: 150px;
+      margin: 7px;
+    }
+    button {
+      font-size: 28px;
+    }
+    .panel-left p {
+      font-size: 26px;
+    }
+    .panel-right p {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .container {
+    h1 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 32px;
+    }
+    .select img {
+      width: 100px;
+      margin: 7px;
+    }
+    .panels {
+      display: flex;
+      flex-direction: column;
+    }
+    .panel-left p {
+      font-size: 26px;
+    }
+    .panel-right p {
+      font-size: 22px;
+    }
+  }
+}
